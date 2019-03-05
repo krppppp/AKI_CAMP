@@ -1,0 +1,2090 @@
+@charset "utf-8";
+
+/**
+ *
+ * Style css
+ *
+ */
+
+/*
+ *
+ *  FontSize
+ *
+ *  font-size: 0.8em   ← 8px
+ *  font-size: 1em     ← 10px
+ *  font-size: 1.2em   ← 12px
+ *
+ */
+
+/* =============================================================================
+   common
+   ========================================================================== */
+.letterfx {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    transition: all 1s;
+    -ms-transition: all 1s;
+    -webkit-transition: all 1s
+}
+
+.letterfx-spin-before {
+    transform: rotate(3600deg);
+    -ms-transform: rotate(3600deg);
+    -webkit-transform: rotate(3600deg)
+}
+
+.letterfx-spin-after {
+    transform: none
+}
+
+.letterfx-fade-before {
+    opacity: 0a
+}
+
+.letterfx-grow-before {
+    transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0)
+}
+
+.letterfx-grow-after {
+    transform: none
+}
+
+.letterfx-smear-before {
+    color: transparent;
+    text-shadow: -1px -1px 25px transparent
+}
+
+.letterfx-smear-after {
+    color: inherit;
+    text-shadow: 0 0 #333
+}
+
+.letterfx-fall-before {
+    visibility: hidden;
+    transform: scale(3, 3);
+    -ms-transform: scale(3, 3);
+    -webkit-transform: scale(3, 3)
+}
+
+.letterfx-fall-after {
+    transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    text-shadow: 0
+}
+
+.letterfx-swirl-before {
+    visibility: hidden;
+    transform: scale(3, 3) rotate(3600deg);
+    -ms-transform: scale(3, 3) rotate(3600deg);
+    -webkit-transform: scale(3, 3) rotate(3600deg)
+}
+
+.letterfx-swirl-after {
+    transform: none
+    text-shadow: 0
+}
+
+.letterfx-wave-container .letterfx {
+    position: relative
+}
+
+.letterfx-wave-before {
+    bottom: 0
+}
+
+.letterfx-wave-after {
+    bottom: 15px
+}
+
+.letterfx-fly-left-container .letterfx, .letterfx-fly-right-container .letterfx, .letterfx-fly-top-container .letterfx, .letterfx-fly-bottom-container .letterfx {
+    position: relative
+}
+
+.letterfx-fly-left-before {
+    left: -50em
+}
+
+.letterfx-fly-left-after {
+    left: 0
+}
+
+.letterfx-fly-right-before {
+    right: -50em
+}
+
+.letterfx-fly-right-after {
+    right: 0
+}
+
+.letterfx-fly-top-before {
+    top: -20em
+}
+
+.letterfx-fly-top-after {
+    top: 0
+}
+
+.letterfx-fly-bottom-before {
+    bottom: -20em
+}
+
+.letterfx-fly-bottom-after {
+    bottom: 0
+}
+
+.akitennisclass43 {
+    width: 970px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.common-sentence {
+    font-size: 1.4em;
+    line-height: 1.8;
+}
+
+.en {
+    font-family: 'bebas_neueregular', Sans-serif;
+}
+
+.common-title {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+    font-family: 'bebas_neueregular', Sans-serif;
+    font-size: 12em;
+    line-height: 1.1;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    text-align: center;
+}
+
+.akitennisclass213 {
+    padding: 45px 0;
+    background-color: #fff;
+}
+
+.akitennisclass213 h1 {
+    margin-bottom: 29px;
+    font-size: 1.8em;
+    line-height: 1.6;
+}
+
+.akitennisclass213 .akitennisclass53 {
+    border: 1px solid #d5d4d4;
+    background-color: #f5f5f5;
+    padding: 26px 32px;
+}
+
+.akitennisclass213 .akitennisclass53 h1 {
+    font-size: 1.6em;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.akitennisclass213 .akitennisclass53 dl {
+    background-color: #fff;
+    width: 440px;
+    height: 152px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.akitennisclass213 .akitennisclass53 dl dt {
+    padding-top: 23px;
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+.akitennisclass213 .akitennisclass53 dl dd {
+    height: 44px;
+    width: 320px;
+    margin: 17px auto 0;
+    line-height: 46px;
+}
+
+.akitennisclass213 .akitennisclass53 .tel dl dd {
+    font-size: 3.1em;
+    font-weight: bold;
+}
+
+.akitennisclass213 .akitennisclass53 .akitennisclass122 dl dd a {
+    display: block;
+    width: 100%;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4fbc00;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.akitennisclass213 .akitennisclass53 .akitennisclass122 dl dd a:hover {
+    background-color: #3f586c;
+    letter-spacing: 10px;
+}
+
+/* =============================================================================
+   block
+   ========================================================================== */
+html,
+body,
+#wrapper {
+    height: 100%;
+}
+
+
+#wrapper {
+    position: relative;
+    z-index: 1;
+    background:linear-gradient( 135deg, rgba(0,0, 0,0.4), rgba(0,0, 0, 0.4)), url(../images/shutterstock_740848420.jpg) center;
+    background-size: cover;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.main-bg {
+    position: fixed;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    z-index: -1;
+}
+
+.main-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 50%;
+    min-height: 50%;
+}
+
+.lt-ie8 .main-bg {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.lt-ie8 .main-bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.nopc-bg {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center no-repeat;
+    background-image: url("../images/kv-bg.akitennisclass219g");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#site-header {
+    position: relative;
+    z-index: 9999;
+}
+
+#site-header .inner {
+    -webkit-perspective: 500px;
+    perspective: 500px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-family: 'bebas_neueregular', 'Hiragino Kaku Gothic ProN', Meiryo, 'MS PGothic', Sans-serif;
+    width: 100%;
+    height: 70px;
+}
+
+#site-header .inner .animation {
+    background-color: rgba(255, 255, 255, 0.9);
+    height: 70px;
+    -webkit-transform-origin: center top;
+    transform-origin: center top;
+    -webkit-transform: rotateX(90deg);
+    transform: rotateX(90deg);
+    opacity: 0;
+}
+
+.lt-ie9 #site-header .inner .animation {
+    background-color: #fff;
+}
+
+#site-header .active .animation {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    opacity: 1;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.lt-ie9 #site-header .inner {
+    display: none;
+}
+
+#site-header .akitennisclass43 {
+    position: relative;
+}
+
+#site-header h1 {
+    padding-top: 23px;
+}
+
+#site-header h1 span,
+#site-header h1 a {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+#site-header h1 .akitennisclass119 {
+    font-size: 3.1em;
+    line-height: 1;
+    letter-spacing: .06em;
+    margin-right: 13px;
+    width: 20%;
+}
+
+
+#site-header h1 span.sentence {
+    font-size: 1.2em;
+    vertical-align: top;
+}
+
+#site-header .akitennisclass51 .akitennisclass55 {
+    position: absolute;
+    top: 18px;
+    right: 45px;
+    display: block;
+    text-align: center;
+    border: 1px solid #2d2d2d;
+    color: #1c1c1c;
+    font-size: 1.5em;
+    width: 148px;
+    height: 33px;
+    line-height: 35px;
+    letter-spacing: .2em;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+#site-header .akitennisclass51 .akitennisclass55:hover {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+#site-header .akitennisclass51 .akitennisclass218 {
+    position: absolute;
+    top: 25px;
+    right: 3px;
+}
+
+#akitennisid2 {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+}
+
+#akitennisid2 dl {
+    text-align: center;
+}
+
+#akitennisid2 dl dt {
+    font-size: 2.1em;
+    line-height: 1;
+    margin-bottom: 15px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+#akitennisid2 dl dd.sentence {
+    font-size: 1.8em;
+    line-height: 1;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+#akitennisid2 dl dd.animate-img {
+    font-family: 'bebas_neueregular', Sans-serif;
+    margin-top: 24px;
+    text-align: left;
+    font-size: 12.8em;
+    line-height: 0.8;
+    letter-spacing: 3px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+#akitennisid2 dl.inbound {
+    width: 370px;
+    position: absolute;
+    bottom: 44%;
+    left: 72px;
+    overflow: hidden;
+}
+
+#akitennisid2 dl.outbound {
+    width: 440px;
+    position: absolute;
+    bottom: 44%;
+    right: 40px;
+    overflow: hidden;
+}
+
+#akitennisid2 .vatu {
+    position: absolute;
+    bottom: 44.742268%;
+    left: 430px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+#akitennisid2 .main-sentence {
+    position: absolute;
+    bottom: 27.628865%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    line-height: 1.6;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+#akitennisid2 .arrow {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    margin-left: -21px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+}
+
+.graph1 {
+    width: 49px;
+    height: 19px;
+    background-color: #FF0004;
+    position: absolute;
+    top: 127px;
+}
+
+.graph2 {
+    width: 49px;
+    height: 49px;
+    background-color: #0052FF;
+    position: absolute;
+    top: 96px;
+    left: 85px;
+}
+
+.graph3 {
+    width: 49px;
+    height: 0px;
+    position: absolute;
+    top: 47px;
+    background-color: #00FF29;
+    left: 171px;
+}
+
+section .akitennisclass80.case.akitennisclass215 .akitennisclass63 {
+    width: 222px;
+    height: 147px;
+    position: absolute;
+    left: 72.3%;
+}
+
+.akitennisclass63 .akitennisclass116 .akitennisclass73 {
+    width: 50%;
+    float: left;
+    height: 100%;
+    background-color: #94DEB7;
+    display: inline-block;
+}
+
+.akitennisclass63 .akitennisclass116 .akitennisclass66 {
+    width: 50%;
+    height: 100%;
+    background-color: #58CB8E;
+    display: inline-block;
+}
+
+.akitennisclass63 .akitennisclass115 .akitennisclass67 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    background-color: #21e421;
+}
+
+.akitennisclass63 .akitennisclass115 .akitennisclass68 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    background-color: #00c500;
+}
+
+.akitennisclass63 .akitennisclass117 .akitennisclass71 {
+    width: 50%;
+    height: 100%;
+    display: inline-block;
+    float: left;
+    background-color: #166aab;
+}
+
+.akitennisclass63 .akitennisclass117 .akitennisclass69 {
+    width: 50%;
+    height: 100%;
+
+    display: inline-block;
+    background-color: #004885;
+}
+
+@media screen and (max-height: 800px) {
+    #akitennisid2 .main-sentence {
+        bottom: 17%;
+    }
+}
+
+.super {
+    background-color: #f5f5f5;
+    padding: 60px 0 40px;
+}
+
+.super .akitennisclass59 {
+    color: #4fbc00;
+    font-weight: bold;
+    font-size: 2.4em;
+}
+
+.super h2.akitennisclass60 {
+    font-size: 2.4em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.super .case {
+    background-color: #fff;
+    padding: 33px 48px 35px 38px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.super .case .akitennisclass47 {
+    float: left;
+}
+
+.super .case h1 {
+    margin-bottom: 12px;
+}
+
+.super .case h1 span {
+    display: inline-block;
+    font-size: 1.7em;
+    line-height: 32px;
+}
+
+.super .case h1 span.first-el-child {
+    margin-right: 7px;
+    font-size: 1.5em;
+    width: 90px;
+    height: 30px;
+    color: #fff;
+    background-color: #4fbc00;
+    text-align: center;
+}
+
+.super .case h1 span:first-child {
+    margin-right: 7px;
+    font-size: 1.5em;
+    padding: 0px 5px;
+    height: 30px;
+    color: #fff;
+    background-color:#3f586b;
+    text-align: center;
+}
+
+.super .case h2 {
+    font-size: 1.9em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.super .case p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.super .case .akitennisclass44 {
+    float: right;
+    position: relative;
+}
+
+.super .akitennisclass80 .akitennisclass44 {
+    width: 222px;
+    height: 168px;
+    position: relative;
+}
+
+.super .akitennisclass80 .akitennisclass44 dd {
+    position: absolute;
+    bottom: -30px;
+    font-size: 1.8em;
+}
+
+.super .akitennisclass80 .akitennisclass44 .akitennisclass86 {
+    left: 5px;
+}
+
+.super .akitennisclass80 .akitennisclass44 .akitennisclass82 {
+    left: 88px;
+}
+
+.super .akitennisclass80 .akitennisclass44 .akitennisclass87 {
+    right: 0;
+}
+
+.super .akitennisclass88 .akitennisclass44 {
+    width: 149px;
+    height: 179px;
+    margin-right: 100px;
+}
+
+.super .akitennisclass88 .akitennisclass44 dd {
+    position: absolute;
+}
+
+.akitennisclass88.case.akitennisclass215 .akitennisclass44 .akitennisclass57 {
+    position: absolute;
+    top: 0px;
+    left: 39px;
+}
+
+.super .akitennisclass88 .akitennisclass44 .akitennisclass86 {
+    top: 34px;
+    left: 190px;
+    width: 60%;
+    font-size: 1.5em;
+}
+
+.super .akitennisclass88 .akitennisclass44 .akitennisclass82 {
+    bottom: -25px;
+    left: 4px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.super .akitennisclass88 .akitennisclass44 .akitennisclass87 {
+    bottom: -25px;
+    left: 92px;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.super .akitennisclass89 .akitennisclass44 {
+    width: 194px;
+    height: 194px;
+    margin-right: 33px;
+}
+
+.super .akitennisclass89 .akitennisclass44 dd {
+    position: absolute;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass86, .super .akitennisclass89 .akitennisclass44 .akitennisclass87, .super .akitennisclass89 .akitennisclass44 .word05 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass82, .super .akitennisclass89 .akitennisclass44 .akitennisclass91, .super .akitennisclass89 .akitennisclass44 .word06 {
+    font-size: 2em;
+    color: #fff;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass86 {
+    top: -11px;
+    left: 145px;
+    width: 60%;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass82 {
+    top: 20px;
+    left: 104px;
+    display: none;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass87 {
+    top: 160px;
+    left: 177px;
+    width: 30%;
+}
+
+.super .akitennisclass89 .akitennisclass44 .akitennisclass91 {
+    top: 150px;
+    left: 86px;
+    display: none;
+}
+
+.super .akitennisclass89 .akitennisclass44 .word05 {
+    top: 7px;
+    left: -20px;
+}
+
+.super .akitennisclass89 .akitennisclass44 .word06 {
+    top: 50px;
+    left: 20px;
+    color: #333;
+    display: none;
+}
+
+.what {
+    position: relative;
+    overflow: hidden;
+}
+
+.what .common-title {
+    color: #fff;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+}
+
+.what .akitennisclass93 {
+    position: absolute;
+    top: 282px;
+    left: 50%;
+    width: 342px;
+    height: 308px;
+    margin-left: -171px;
+    background: url("../images/contents02-circle.png") top left no-repeat;
+}
+
+.what .akitennisclass93 dl {
+    padding-top: 90px;
+    text-align: center;
+}
+
+.what .akitennisclass93 dl dt {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: 13px;
+}
+
+.what .akitennisclass93 dl dd {
+    font-size: 1.6em;
+}
+
+.what .akitennisclass93 dl dd.en {
+    font-size: 5.2em;
+    line-height: 1;
+    color: #1c1c1c;
+    letter-spacing: 2px;
+    margin-right: -2px;
+    margin-bottom: 40px;
+}
+
+.what .akitennisclass47,
+.what .akitennisclass44 {
+    background-color: #44586b;
+    width: 50%;
+    padding: 230px 0 270px;
+    float: left;
+}
+
+.what .akitennisclass44 {
+    background-color: #6eb92b;
+}
+
+.what .akitennisclass47 .inner {
+    text-align: right;
+    margin-right: 185px;
+}
+
+.what .akitennisclass44 .inner {
+    text-align: left;
+    margin-left: 185px;
+}
+
+.what .inner h1 {
+    font-size: 2.1em;
+    font-weight: bold;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.what .akitennisclass44 .inner h1 {
+    margin-bottom: 22px;
+}
+
+.what .inner .sentence {
+    margin-top: 25px;
+}
+
+.what .akitennisclass44 .inner .sentence {
+    margin-top: 21px;
+}
+
+.what .inner .sentence p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.what .inner .sentence p.last-el-child {
+    margin-bottom: 0;
+}
+
+.what .inner .sentence p:last-child {
+    margin-bottom: 0;
+}
+
+.what .btm-contents {
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+}
+
+.what .btm-contents h1 {
+    font-size: 2.4em;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.what .btm-contents .inbound,
+.what .btm-contents .outbound {
+    position: relative;
+    width: 50%;
+    float: left;
+}
+
+.what .btm-contents .inbound {
+    left: -100%;
+}
+
+.what .btm-contents .outbound {
+    left: 100%;
+}
+
+.what .btm-contents .inbound .arrow {
+    height: 85px;
+    background: #fff url("../images/contents02-arrow01.png") top right no-repeat;
+    padding-right: 40px;
+}
+
+.what .btm-contents .outbound .arrow {
+    height: 85px;
+    background: #fff url("../images/contents02-arrow02.png") top left no-repeat;
+    padding-left: 40px;
+}
+
+.what .btm-contents .inbound .arrow p,
+.what .btm-contents .outbound .arrow p {
+    font-size: 1.4em;
+    padding: 10px 0;
+    text-align: left;
+}
+
+.what .btm-contents .inbound .arrow p {
+    text-align: right;
+}
+
+.needed {
+    background:linear-gradient( 135deg, rgba(0,0, 0,0.4), rgba(0,0, 0, 0.4)),  url("../images/contents03-bg.jpg") top center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    height: 1100px;
+    overflow: hidden;
+}
+
+.needed .common-title {
+    color: #fff;
+    padding-top: 60px;
+}
+
+.needed .akitennisclass43 {
+    width: 765px;
+}
+
+.needed h2,
+.needed h3 {
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+}
+
+.needed h2 {
+    margin-bottom: 33px;
+    font-size: 2.2em;
+}
+
+.needed h3 {
+    border: 1px solid #fff;
+    font-size: 2.4em;
+    border-left: none;
+    border-right: none;
+    line-height: 1;
+    padding: 15px 0 13px;
+    margin-bottom: 40px;
+}
+
+.needed .akitennisclass28 {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 23px 21px 21px 19px;
+    margin-bottom: 20px;
+}
+
+.lt-ie9 .needed .akitennisclass28 {
+    background-color: #fff;
+}
+
+.needed .akitennisclass28 .sentence {
+    float: left;
+}
+
+.needed .akitennisclass28 .sentence p {
+    margin-top: 21px;
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+
+.needed .akitennisclass28 .sentence .akitennisclass64 {
+    font-weight: bold;
+    color: #a40000;
+}
+
+.needed .akitennisclass28 .akitennisclass94 {
+    float: left;
+    margin-left: 18px;
+    width: 300px;
+}
+
+.needed .akitennisclass28 .akitennisclass94 li {
+    float: left;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.needed .akitennisclass29 {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 35px 0 33px;
+}
+
+.lt-ie9 .needed .akitennisclass29 {
+    background-color: #fff;
+}
+
+.needed .akitennisclass29 h4 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.needed .akitennisclass29 .akitennisclass123 {
+    width: 700px;
+    height: 112px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.needed .akitennisclass29 .akitennisclass123 h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 46px;
+    height: 24px;
+    margin-left: -23px;
+    margin-top: -10px;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    z-index: 9999;
+    font-size: 1.2em;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 {
+    float: left;
+    width: 50%;
+    height: 56px;
+    position: relative;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl {
+    border-bottom: 2px solid #848484;
+    padding-bottom: 13px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl {
+    padding-top: 15px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl {
+    border-right: 2px solid #848484;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dt {
+    font-family: 'bebas_neueregular', Sans-serif;
+    position: absolute;
+    bottom: 13px;
+    font-size: 4.3em;
+    line-height: 1;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl dt {
+    right: 36px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dt {
+    left: 36px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl dt,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dt {
+    top: 15px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl dd,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl dd,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl dd,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dd {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl dd,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dd {
+    margin-left: 100px;
+}
+
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass95 dl dd em,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass96 dl dd em,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass97 dl dd em,
+.needed .akitennisclass29 .akitennisclass123 .akitennisclass98 dl dd em {
+    color: #a40000;
+}
+
+.service {
+    background-color: #eeeeee;
+}
+
+.service h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.service .process {
+    position: relative;
+    margin-top: 77px;
+    height: 322px;
+}
+
+.service .process .process-potential,
+.service .process .process-prospect,
+.service .process .process-customer {
+    position: relative;
+    height: 322px;
+    float: left;
+}
+
+.service .process .process-potential .bg,
+.service .process .process-prospect .bg,
+.service .process .process-customer .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.service .process .process-potential section h1,
+.service .process .process-prospect section h1,
+.service .process .process-customer section h1 {
+    position: absolute;
+    font-size: 1.9em;
+    line-height: 1;
+}
+
+.service .process .process-potential section .sentence,
+.service .process .process-prospect section .sentence,
+.service .process .process-customer section .sentence {
+    position: absolute;
+    font-size: 1.4em;
+    line-height: 1.6;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+}
+
+.service .process .process-potential section .sentence.active,
+.service .process .process-prospect section .sentence.active,
+.service .process .process-customer section .sentence.active {
+    opacity: 1;
+}
+
+.service .process .process-potential {
+    width: 489px;
+}
+
+.service .process .process-potential h1 {
+    bottom: 50px;
+    left: 98px;
+}
+
+.service .process .process-potential .human {
+    width: 182px;
+    position: absolute;
+    top: 76px;
+    left: 45px;
+}
+
+.service .process .process-potential .human ul li {
+    float: left;
+    width: 20px;
+    margin-left: 6px;
+    margin-bottom: 7px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.service .process .process-potential .human ul li.active {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.service .process .process-potential .inbound {
+    font-size: 1.4em;
+    position: absolute;
+    top: -30px;
+    left: 0;
+}
+
+.service .process .process-potential .outbound {
+    font-size: 1.4em;
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+}
+
+.service .process .process-potential .sentence {
+    top: 130px;
+    left: 288px;
+}
+
+.service .process .process-prospect {
+    width: 365px;
+}
+
+.service .process .process-prospect h1 {
+    bottom: 85px;
+    left: 59px;
+}
+
+.service .process .process-prospect .human {
+    width: 130px;
+    position: absolute;
+    top: 102px;
+    left: 28px;
+}
+
+.service .process .process-prospect .human ul li {
+    float: left;
+    width: 20px;
+    margin-left: 6px;
+    margin-bottom: 7px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.service .process .process-prospect .human ul li.active {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.service .process .process-prospect .sentence {
+    top: 130px;
+    left: 208px;
+}
+
+.service .process .process-customer {
+    width: 126px;
+}
+
+.service .process .process-customer h1 {
+    bottom: 110px;
+    left: 45px;
+    font-weight: bold;
+}
+
+.service .process .process-customer .human {
+    width: 84px;
+    position: absolute;
+    top: 128px;
+    left: 22px;
+}
+
+.service .process .process-customer .human ul li {
+    float: left;
+    width: 22px;
+    margin-left: 6px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -ms-filter: "alpha( opacity=0 )";
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.service .process .process-customer .human ul li.active {
+    opacity: 1;
+    -webkit-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+}
+
+.service .process .process-sentence {
+    font-size: 1.9em;
+    line-height: 1.6;
+    position: absolute;
+    bottom: -29px;
+    left: 390px;
+}
+
+.service .process .process-sentence em {
+    color: #00CCCC;
+}
+
+.akitennisclass74 {
+    padding-bottom: 50px;
+}
+
+.akitennisclass74 .common-title {
+    padding-top: 60px;
+}
+
+.akitennisclass74 h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.akitennisclass74 h3 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    color: white;
+}
+
+.akitennisclass74 .akitennisclass75 {
+    width: 880px;
+    margin: 0 auto 60px;
+}
+
+.akitennisclass74 .akitennisclass75 h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.akitennisclass74 .akitennisclass75 ul li {
+    float: left;
+    width: 20%;
+    padding: 0 0 5px;
+}
+
+
+.akitennisclass74 .akitennisclass75 ul li dl {
+    height: 170px;
+    width: 95%;
+    position: relative;
+    margin: auto;
+    background: rgba(114, 116, 117, .7);
+    border-radius: 85px;
+}
+
+.akitennisclass74 .akitennisclass75 ul li dl dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.akitennisclass74 .akitennisclass75 ul li dl dd {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    width: 148px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+
+.akitennisclass74 .akitennisclass114 {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.akitennisclass74 .akitennisclass114 h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl {
+    width: 246px;
+    float: left;
+    margin-right: 71px;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl.last-el-child {
+    margin-right: 0;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl:last-child {
+    margin-right: 0;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl dt {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 110px;
+    margin-bottom: 7px;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl.akitennisclass33 dt {
+    background: url("../images/contents05-icon01.png") top center no-repeat;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl.akitennisclass31 dt {
+    background: url("../images/contents05-icon02.png") top center no-repeat;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl.akitennisclass30 dt {
+    background: url("../images/contents05-icon03.png") top center no-repeat;
+}
+
+.akitennisclass74 .akitennisclass114 .akitennisclass45 dl dd {
+    font-size: 1.4em;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+.akitennisclass741 {
+    background: url("../images/contents05-bg.jpg") top center no-repeat;
+    /* height: 898px; */
+    padding: 50px;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.akitennisclass741 .common-title {
+    padding-top: 60px;
+}
+
+.akitennisclass741 h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.akitennisclass741 .akitennisclass75 {
+    width: 880px;
+    margin: 0 auto 60px;
+}
+
+.akitennisclass741 .akitennisclass75 h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.akitennisclass741 .akitennisclass75 ul li {
+    float: left;
+    width: 20%;
+    padding: 0 0 5px;
+}
+
+
+.akitennisclass741 .akitennisclass75 ul li dl {
+    height: 170px;
+    width: 95%;
+    position: relative;
+    margin: auto;
+    background: rgba(114, 116, 117, .7);
+    border-radius: 85px;
+}
+
+.akitennisclass741 .akitennisclass75 ul li dl dt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.akitennisclass741 .akitennisclass75 ul li dl dd {
+    position: absolute;
+    top: 120px;
+    left: 10px;
+    width: 148px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+
+.akitennisclass741 .akitennisclass114 {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.akitennisclass741 .akitennisclass114 h1 {
+    font-size: 2.3em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl {
+    width: 246px;
+    float: left;
+    margin-right: 71px;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl.last-el-child {
+    margin-right: 0;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl:last-child {
+    margin-right: 0;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl dt {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 110px;
+    margin-bottom: 7px;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl.akitennisclass33 dt {
+    background: url("../images/contents05-icon01.png") top center no-repeat;
+    background-size: contain;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl.akitennisclass31 dt {
+    background: url("../images/contents05-icon02.png") top center no-repeat;
+    background-size: contain;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl.akitennisclass30 dt {
+    background: url("../images/contents05-icon03.png") top center no-repeat;
+    background-size: contain;
+}
+
+.akitennisclass741 .akitennisclass114 .akitennisclass45 dl dd {
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.flow {
+    background-color: #eeeeee;
+    padding: 60px 0 50px;
+}
+
+.flow h2 {
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.flow .akitennisclass48 {
+    width: 947px;
+    margin: 0 auto;
+}
+
+.flow .akitennisclass48 li {
+    float: left;
+    width: 154px;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 {
+    width: 177px;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 dl {
+    background: url("../images/contents06-flow01.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li.akitennisclass39 dl {
+    background: url("../images/contents06-flow02.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li.akitennisclass38 dl {
+    background: url("../images/contents06-flow03.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li.akitennisclass37 dl {
+    background: url("../images/contents06-flow04.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li.akitennisclass34 dl {
+    background: url("../images/contents06-flow05.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li.akitennisclass36 dl {
+    background: url("../images/contents06-flow06.png") top left no-repeat;
+}
+
+.flow .akitennisclass48 li dl dt {
+    width: 130px;
+    height: 85px;
+    padding-top: 42px;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 dt {
+    width: 153px;
+    line-height: inherit;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 dt,
+.flow .akitennisclass48 li.akitennisclass38 dt,
+.flow .akitennisclass48 li.akitennisclass34 dt {
+    color: #fff;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 dt,
+.flow .akitennisclass48 li.akitennisclass34 dt {
+    padding-top: 30px;
+}
+
+.flow .akitennisclass48 li dl dd {
+    margin: 12px auto 0;
+    font-size: 0.7em;
+    width: 120px;
+    margin-left: 6px;
+}
+
+.flow .akitennisclass48 li.akitennisclass40 dd {
+    margin-left: 15px;
+}
+
+.v_s {
+    background-color: #3f586c;
+    padding: 60px 0 40px;
+    color: #fff;
+}
+
+.v_s h2 {
+    font-size: 1.8em;
+    line-height: 1.8;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 21px;
+    color: white;
+}
+
+.v_s .akitennisclass13 {
+    width: 865px;
+    margin: 0 auto;
+}
+
+.v_s .akitennisclass13 li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.v_s .akitennisclass13 li.vatu {
+    margin: 112px 27px 0 24px;
+    width: 32px;
+}
+
+.v_s .akitennisclass13 li dl dd {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+}
+
+#akitennisid1 {
+    border-top: 1px solid #eee;
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+#akitennisid1 h1 {
+    font-size: 1.4em;
+    line-height: 1.6;
+    margin-bottom: 14px;
+}
+
+#akitennisid1 p .en {
+    font-weight: bold;
+    font-size: 3em;
+    letter-spacing: .06em;
+    display: block;
+    margin-bottom: 3px;
+    line-height: 1;
+}
+
+#akitennisid1 p .akitennisclass219 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.no-scroll #wrapper {
+    height: auto !important;
+    height: 100%;
+    min-height: 100%;
+}
+
+.no-scroll .common-title {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "alpha( opacity=100 )";
+}
+
+.no-scroll .send-after {
+    padding: 190px 0;
+}
+
+.no-scroll .send-after p {
+    font-size: 1.6em;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+.no-scroll .send-after p.pagetop {
+    margin-top: 10px;
+}
+
+.no-scroll .send-after p.pagetop a {
+    text-decoration: underline;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.no-scroll .send-after p.pagetop a:hover {
+    color: #4fbc00;
+}
+
+.no-scroll #akitennisid1 {
+    width: 100%;
+    height: 190px;
+    position: absolute;
+    bottom: 0;
+}
+
+/* =============================================================================
+   ohtaki original
+   ========================================================================== */
+.akitennisclass78 {
+    font-weight: bold;
+    color: #4fbc00;
+    display: inline;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.akitennisclass117 {
+    height: 0%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 49px;
+    left: 1px;
+}
+
+.akitennisclass115 {
+    left: 86px;
+    height: 0%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+}
+
+.akitennisclass116 {
+    left: 172px;
+    height: 0%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 50px;
+}
+
+.akitennisclass64 {
+    color: #4fbc00
+}
+
+figure {
+    display: none;
+    margin: 0 auto;
+    position: relative;
+    width: 194px;
+    padding-bottom: 194px;
+}
+
+.akitennisclass52 {
+    background-color: #FFFFFF;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 30%;
+    left: 28%;
+    border-radius: 150px
+}
+
+.akitennisclass50 {
+    background-color: rgba(255, 255, 255, 0.50);
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 27.3%;
+    left: 25.3%;
+    border-radius: 150px;
+}
+
+figcaption {
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 40%;
+    z-index: 2;
+}
+
+svg {
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+circle {
+    fill: rgba(0, 0, 0, 0);
+    stroke-width: 31.8309886184;
+    stroke-dasharray: 0, 0, 0, 100;
+    stroke-dashoffset: 25;
+    -webkit-animation: pie1 3s ease both;
+    animation: pie1 3s ease both;
+}
+
+.akitennisclass124 {
+    stroke: #9e9e9e;
+    -webkit-animation-name: pie1;
+    animation-name: pie1;
+}
+
+.akitennisclass121 {
+    stroke: #00c000;
+    -webkit-animation-name: pie2;
+    animation-name: pie2;
+}
+
+.akitennisclass120 {
+    stroke: #00c000;
+    -webkit-animation-name: pie3;
+    animation-name: pie3;
+}
+
+/*
+ pie percentage made by stroke-dasharray.
+ stroke-dasharray format is...
+ keyframe 100% : 0 offset this-percentage rest
+ I added keyframe 50% for infinite presentation.
+*/
+
+/* 1st pie is 40% */
+@-webkit-keyframes pie1 {
+    50%, 100% {
+        stroke-dasharray: 10, 90, 0, 0;
+    }
+}
+
+@keyframes pie1 {
+    50%, 100% {
+        stroke-dasharray: 10, 90, 0, 0;
+    }
+}
+
+/* 2nd pie is 30% */
+@-webkit-keyframes pie2 {
+    50%, 100% {
+        stroke-dasharray: 70, 40, 0, 0;
+    }
+}
+
+@keyframes pie2 {
+    50%, 100% {
+        stroke-dasharray: 70, 40, 0, 0;
+    }
+}
+
+/* 3rd pie is 30% */
+@-webkit-keyframes pie3 {
+    50%, 100% {
+        stroke-dasharray: 0, 70, 30, 0;
+    }
+}
+
+@keyframes pie3 {
+    50%, 100% {
+        stroke-dasharray: 0, 70, 30, 0;
+    }
+}
+.btm-contents strong {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.col-md-8 {
+    width: 66.66667%;
+}
+
+.col-md-4 {
+    width: 33.33333%;
+}
+
+.col-md-8, .col-md-4 {
+    float: left;
+}
+.container {
+    width: 950px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 980px) {
+
+.container {
+    width: 100%;
+}
+
+.akitennisclass43 {
+    width: 100%;
+}
+}
+@media screen and (min-width: 1000px) {
+
+.akitennisclass117 {
+
+    left: -1px;
+}
+
+.akitennisclass115 {
+    left: 84px;
+    height: 0%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+}
+
+.akitennisclass116 {
+    left: 170px;
+
+}
+}
+
+
+.row {
+    margin: 0 15px;
+
+}
+
+.cp_iptxt {
+    position: relative;
+    width: 80%;
+    margin: auto;
+}
+.cp_iptxt input[type=text] {
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 15px 0;
+    padding: 0.3em;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    outline: none;
+}
+.cp_iptxt input[type=text]:focus {
+    border-color:#4ebc01;
+}
+.cp_iptxt input[type=text] {
+    padding-left: 40px;
+}
+.cp_iptxt i {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    padding: 9px 8px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+.cp_iptxt input[type=text]:focus + i {
+    color: #4ebc01;
+}
+
+
+.cp_iptxt textarea{
+    font: 15px/24px sans-serif;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 15px 0;
+    padding: 0.3em;
+    transition: 0.3s;
+    border: 1px solid #1b2538;
+    border-radius: 4px;
+    outline: none;
+    height: 200px;
+}
+.cp_iptxt textarea:focus {
+    border-color: #4ebc01;
+}
+.cp_iptxt textarea{
+    padding-left: 40px;
+}
+.cp_iptxt i {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding: 9px 8px;
+    transition: 0.3s;
+    color: #aaaaaa;
+}
+.cp_iptxt textarea:focus + i {
+    color: #4ebc01;
+
+}
+
+.btn-circle-border-double {
+    display: inline-block;
+    text-decoration: none;
+    color: #fefefe;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    border: double 4px #fefefe;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    transition: .6s;
+    margin-top: 60px;
+}
+
+.btn-circle-border-double:hover {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+}
+
+.contact_text {
+    border: unset;
+    background: #3f586a;
+    color: white;
+    font-size: 20px;
+}
