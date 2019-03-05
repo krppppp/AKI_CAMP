@@ -157,22 +157,30 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
             // title effect
             if (_window.scrollTop() > $(_super).offset().top - 400) {
                 if(!isTitleEffect[_super]) {
-                    titleEffect(_super);
+                  //titleEffect(_super);
+                  $('#wrapper > section:nth-child(4) > div > div > h1').addClass('flip slower animated');
+                  $('#wrapper > section:nth-child(4) > div > div > h1').css("opacity",1);
                 }
             }
             if (_window.scrollTop() > $(_what).offset().top - 400) {
                 if(!isTitleEffect[_what]) {
-                    titleEffect(_what);
+                  //titleEffect(_what);
+                  $('#wrapper > section:nth-child(3) > div > h1').addClass('fadeIn slower animated');
+                  $('#wrapper > section:nth-child(3) > div > h1').css("opacity",1);
+                  $('#wrapper > section:nth-child(3) > div > h1').addClass('flipInX slower animated');
                 }
             }
             if (_window.scrollTop() > $(_needed).offset().top - 400) {
                 if(!isTitleEffect[_needed]) {
-                    titleEffect(_needed);
+                  //titleEffect(_needed);
+                  $('#wrapper > section:nth-child(6) > div > h1').addClass('shake slower animated');
+                  $('#wrapper > section:nth-child(6) > div > h1').css("opacity",1);
                 }
             }
             if (_window.scrollTop() > $(_service).offset().top - 400) {
                 if(!isTitleEffect[_service]) {
-                    titleEffect(_service);
+                  //titleEffect(_service);
+                  $('#wrapper > section:nth-child(8) > div > div > h1').addClass('zoomIn slower animated');
                 }
             }
             if (_window.scrollTop() > $(_backup).offset().top - 400) {
@@ -182,7 +190,9 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
             }
             if (_window.scrollTop() > $(_flow).offset().top - 400) {
                 if(!isTitleEffect[_flow]) {
-                    titleEffect(_flow);
+                  //titleEffect(_flow);
+                  $('#wrapper > section:nth-child(11) > div > div > h1').addClass('slideInUp slower animated');
+                  $('#wrapper > section:nth-child(11) > div > div > h1').css("opacity",1);
                 }
             }
             if (_window.scrollTop() > $(_v_s).offset().top - 400) {
