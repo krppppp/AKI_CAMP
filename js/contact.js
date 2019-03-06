@@ -8,12 +8,12 @@ AWS.config.credentials.get(function(err) {
 });
 
 function uploadFile() {
-    var s3BucketName = "akicamp.com";
+    var s3BucketName = "akichange.com";
     var now = new Date();
     var obj = {"name":$id("name").value, "mail":$id("mail").value ,"contents":$id("contents").value, "date": now.toLocaleString()};
     var s3 = new AWS.S3({params: {Bucket: s3BucketName}});
-    var blob = new Blob([JSON.stringify(obj, null, 2)], {type:'text/plain'});
-    s3.putObject({Key: "uploads/" +now.getTime()+".txt", ContentType: "text/plain", Body: blob, ACL: "public-read"},
+    var blob = new Blob([JSON.stringify(obj, null, 2)], {type:'text/plain;charset=UTF-8'});
+    s3.putObject({Key: "uploads/" +now.getTime()+".txt", ContentType: "text/plain;charset=UTF-8", Body: blob, ACL: "public-read"},
         function(err, data){
             if(data !== null){
                 alert("お問い合わせ完了致しました");

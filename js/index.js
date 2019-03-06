@@ -6,8 +6,8 @@ var mailer = require('nodemailer');
 var settings = {
     service: 'Gmail',
     auth: {
-        user: 'krppppp@gmail.com',
-        pass: '9610pggj',
+        user: 'aki.contact.mail@gmail.com',
+        pass: 'akicontact00',
         port: 25
     }
 };
@@ -25,10 +25,10 @@ exports.handler = function(event, context) {
             } else {
                 var message = JSON.parse(data.Body);
                 var options = {
-                    to : 'black@akitennis.co.jp',
+                    to : 'black@akitennis.co.jp, info@akitennis.co.jp',
                     replyTo : message.mail,
-                    subject: message.title+"より",
-                    text:"tel:"+ message.tel +"　　" + message.contents + "　　　"+  message.date
+                    subject: "AKI CHANGEより"+message.name+"様からお問い合わせ"+  message.date,
+                    text:"メールアドレス:"+message.mail+"\\n"+ "お問い合わせ内容:"+ message.contents
                 };
                 smtp.sendMail(options, function(error, info){
                     if (error){
