@@ -125,7 +125,7 @@
 }
 
 .case-study .ttl {
-    font-size: 4.5rem;
+    font-size: 3.4rem !important;
     font-weight: bold;
     text-align: center;
     letter-spacing: .1rem;
@@ -222,7 +222,7 @@
 }
 
 .what-ttl {
-    font-size: 5rem;
+    font-size: 4rem !important;
     background: -moz-linear-gradient(left, #38586e, #4fbc00);
     background: -webkit-linear-gradient(left, #38586e 0%, #4fbc00 100%);
     -webkit-background-clip: text;
@@ -982,8 +982,8 @@
     color: #4fbc00;
 }
 
-.team-section-grid p{
-    font-size: 12px;
+.team-section-grid1 p{
+    font-size: 15px;
     font-weight: bold;
 }
 
@@ -1140,4 +1140,8 @@
     background: #3f586a;
     color: white;
     font-size: 20px;
+}
+
+.team-section-grid1 h2{
+    font-size: 2rem;
 }

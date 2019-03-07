@@ -160,3 +160,41 @@
 
 
 }());
+
+
+$(function () {
+    $('.akitennisclass44').waypoint(function () {
+        $('figure').fadeIn(3000);
+    });
+}, {offset: '40%'});
+$('.akitennisclass63').on('inview', function () {
+    setTimeout(function () {
+        $(".akitennisclass117").animate({
+            "height": "30%"
+        }, "300");
+    }, 1000);
+});
+$('.akitennisclass63').on('inview', function () {
+    setTimeout(function () {
+        $(".akitennisclass115").animate({
+            "height": "50%"
+        }, "300");
+    }, 1600);
+});
+$(function () {
+    $('.akitennisclass63').waypoint(function () {
+        $(".arrow-big").animate({
+            "width": "115px",
+            "height": "138px"
+        }, "slow");
+    });
+}, {offset: '40%'});
+$(function () {
+    $(".akitennisclass82").fadeIn(3000);
+});
+$(function () {
+    $(".akitennisclass91").fadeIn(3500);
+});
+$(function () {
+    $(".akitennisclass91").fadeIn(4000);
+});
