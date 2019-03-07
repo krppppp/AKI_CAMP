@@ -337,11 +337,11 @@
       <path value="$PROJECT_DIR$/node_modules/xmlbuilder/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-1080" />
-    <option name="y" value="-1020" />
+    <option name="y" value="-997" />
     <option name="width" value="1080" />
-    <option name="height" value="1920" />
+    <option name="height" value="1897" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">

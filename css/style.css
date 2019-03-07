@@ -2088,3 +2088,7 @@ circle {
     color: white;
     font-size: 20px;
 }
+
+#logo {
+    letter-spacing: -3px;
+}
