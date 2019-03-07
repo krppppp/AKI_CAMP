@@ -1,0 +1,50 @@
+// CONFIGURABLE
+$bounce-time: 1.5s;
+$bounce-letter-delay-divisor: 17.5;
+$bounce-timing-function: cubic-bezier(0.05, 0, 0.2, 1);
+$bounce-height: 1; // unit: em
+$shadow-opacity: 0.45;
+$shadow-scattering-initial: 0.025; // unit: em
+$shadow-scattering-peak: 0.35; // unit: em
+$font-family: "Product Sans"; // preferably sans-serif
+$font-size: 6rem;
+$font-weight: bold;
+$font-style: normal;
+$letter-colors: black,black,black,black,black,black,black,black; // each letter must be assigned a color individually
+
+// UNCONFIGURABLE
+$bounce-half-time: $bounce-time / 2;
+$bounce-delay: $bounce-time / $bounce-letter-delay-divisor;
+$bounce-height: $bounce-height * 1em;
+$shadow-scattering-initial: $shadow-scattering-initial * 1em;
+$shadow-scattering-peak: $shadow-scattering-peak * 1em;
+
+
+
+#letter {
+  animation: bounce $bounce-half-time $bounce-timing-function infinite alternate;
+  display: inline-block;
+  transform: translate3d(0, 0, 0);
+  margin-top: 0.5em;
+  text-shadow: rgba(#000, $shadow-opacity) 0 0 $shadow-scattering-initial;
+  font: $font-style $font-weight $font-size $font-family, sans-serif;
+  @for $i from 1 through length($letter-colors) {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * $bounce-delay;
+      color: nth($letter-colors, $i);
+    }
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translate3d(0, 0, 0);
+    text-shadow: rgba(#000, $shadow-opacity) 0 0 $shadow-scattering-initial;
+  } 100% {
+    transform: translate3d(0, -$bounce-height, 0);
+    text-shadow: rgba(#000, $shadow-opacity) 0 $bounce-height $shadow-scattering-peak;
+  }
+}
+ //View Compiled
+ //Resources
