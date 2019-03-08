@@ -489,7 +489,7 @@
 									<dl class="akitennisclass33">
 										<dt>開発環境の心配なし</dt>
 										<dd>
-											開発するにあたって初心者の障害となる環境設定。そんなめんどくさい設定をAKI ACADEMYが全て負担致します。環境構築で時間を取られることもございません
+											開発するにあたって初心者の障害となる環境設定。そんなめんどくさい設定をAKI CHANGEが全て負担致します。環境構築で時間を取られることもございません
 										</dd>
 									</dl>
 									<img src="../images/contents05-icon02.png" width="150px">
@@ -507,7 +507,7 @@
 									<dl class="akitennisclass30">
 										<dt>手厚いサポート</dt>
 										<dd>
-											AKI ACADEMYにはプロのエンジニアが多数在籍。わからないことがあったらサポートできる体制も万全です。時間を無駄にはさせません。
+											AKI CHANGEにはプロのエンジニアが多数在籍。わからないことがあったらサポートできる体制も万全です。時間を無駄にはさせません。
 										</dd>
 									</dl>
 								</div>
@@ -757,20 +757,36 @@
 											<div class="cp_iptxt">
 												<input id="name" type="text" name="name" type="text" placeholder="お名前">
 												<i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
-											</div>
+                                                <span id="error1" class="form-team safe" aria-live="polite"></span>
+
+                                            </div>
 											<div class="cp_iptxt">
 												<input id="mail" type="text" name="mail" placeholder="メールアドレス">
 												<i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
-											</div>
+                                                <span id="error2" class="form-team safe" aria-live="polite"></span>
+
+                                            </div>
+                                            <div class="cp_iptxt">
+                                                <input id="tel" type="text" name="tel" placeholder="電話番号">
+                                                <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+                                                <span id="error3" class="form-team safe" aria-live="polite"></span>
+
+                                            </div>
 											<div class="cp_iptxt">
 												<textarea id="contents" name="contents" class="fontchange" placeholder="お問い合わせ内容はこちら"></textarea>
 												<i class="fa fa-comments fa-lg fa-fw" aria-hidden="true"></i>
-											</div>
+                                                <span id="error4" class="form-team safe" aria-live="polite"></span>
+
+                                            </div>
 
 											<div id="button_area" class="clearfix btn-circle-border-double">
 												<input onClick="uploadFile();" type="button" value="Contact" id="css_button" class="button_right contact_text " style="    border: unset;"/>
 											</div>
-										</form>
+                                            <br>
+                                            <br>
+                                            <p id="error5" class="form-team safe" aria-live="polite"></p>
+
+                                        </form>
 									</div>
 								</div>
 							</div>

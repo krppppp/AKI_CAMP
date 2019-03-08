@@ -28,7 +28,7 @@ exports.handler = function(event, context) {
                     to : 'black@akitennis.co.jp, info@akitennis.co.jp',
                     replyTo : message.mail,
                     subject: "AKI CHANGEより"+message.name+"様からお問い合わせ"+  message.date,
-                    text:"メールアドレス:"+message.mail+"\\n"+ "お問い合わせ内容:"+ message.contents
+                    text:"メールアドレス:"+message.mail+"\¥n"+"電話番号:"+message.tel+"\¥n"+ "お問い合わせ内容:"+ message.contents
                 };
                 smtp.sendMail(options, function(error, info){
                     if (error){
