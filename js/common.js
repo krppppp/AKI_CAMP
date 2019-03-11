@@ -122,18 +122,16 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
         var $header        = $('#site-header'),
             $wrapper       = $('#wrapper'),
             _super     = '.super',
-            _what          = '.what',
+            _akitennisclass215          = '.akitennisclass215',
             _needed       = '.needed',
-            _service       = '.service',
-            _backup        = '.akitennisclass74',
+            _akitennisclass74        = '.akitennisclass74',
             _flow          = '.flow',
             _v_s = '.v_s',
             isTitleEffect = {
                 _super: false,
-                _what: false,
+                _akitennisclass215: false,
                 _needed: false,
-                _service: false,
-                _backup: false,
+                _akitennisclass74: false,
                 _flow: false,
                 _v_s: false
             };
@@ -162,9 +160,9 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
                   $('#wrapper > section:nth-child(4) > div > div > h1').css("opacity",1);
                 }
             }
-            if (_window.scrollTop() > $(_what).offset().top - 400) {
-                if(!isTitleEffect[_what]) {
-                  //titleEffect(_what);
+            if (_window.scrollTop() > $(_akitennisclass215).offset().top - 400) {
+                if(!isTitleEffect[_akitennisclass215]) {
+                  //titleEffect(_akitennisclass215);
                   $('#wrapper > section:nth-child(3) > div > h1').addClass('fadeIn slower animated');
                   $('#wrapper > section:nth-child(3) > div > h1').css("opacity",1);
                   $('#wrapper > section:nth-child(3) > div > h1').addClass('flipInX slower animated');
@@ -177,15 +175,10 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
                   $('#wrapper > section:nth-child(6) > div > h1').css("opacity",1);
                 }
             }
-            if (_window.scrollTop() > $(_service).offset().top - 400) {
-                if(!isTitleEffect[_service]) {
-                  //titleEffect(_service);
-                  $('#wrapper > section:nth-child(8) > div > div > h1').addClass('zoomIn slower animated');
-                }
-            }
-            if (_window.scrollTop() > $(_backup).offset().top - 400) {
-                if(!isTitleEffect[_backup]) {
-                    titleEffect(_backup);
+
+            if (_window.scrollTop() > $(_akitennisclass74).offset().top - 400) {
+                if(!isTitleEffect[_akitennisclass74]) {
+                    titleEffect(_akitennisclass74);
                 }
             }
             if (_window.scrollTop() > $(_flow).offset().top - 400) {
@@ -214,73 +207,13 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
                     $('#site-header .inner').removeClass('active');
                 }
             }
-            if (_window.scrollTop() > $(_what).offset().top) {
-                $('.what .btm-contents .inbound').animate({
+            if (_window.scrollTop() > $(_akitennisclass215).offset().top) {
+                $('.akitennisclass215 .btm-contents .inbound').animate({
                     'left': '0px'
                 }, 1000, 'easeOutQuint');
-                $('.what .btm-contents .outbound').animate({
+                $('.akitennisclass215 .btm-contents .outbound').animate({
                     'left': '0px'
                 }, 1000, 'easeOutQuint');
-            }
-            if (_window.scrollTop() > $(_service).offset().top - 200) {
-                var _isShow = false;
-
-                function humanShow(_block, _index) {
-                    if( $('html').hasClass('lt-ie9')) {
-                        _block.delay(_index*50).animate({
-                            opacity: 1
-                        }, 100);
-                    } else {
-                        setTimeout(function() {
-                            _block.addClass('active');
-                        }, _index*50)
-                    }
-                }
-                function serviceAnimation(_index, _interval) {
-                    if(_index == 1) {
-                        $('.service .process .process-potential .human ul li').each( function(index, val) {
-                            humanShow($(this), index);
-                        });
-                    } else if(_index == 2) {
-                        if( $('html').hasClass('lt-ie9')) {
-                            $('.service .process .process-potential section .sentence').animate({
-                                opacity: 1
-                            }, 800);
-                        } else {
-                            $('.service .process .process-potential section .sentence').addClass('active');
-                        }
-                    } else if(_index == 3) {
-                        $('.service .process .process-prospect .human ul li').each( function(index, val) {
-                            humanShow($(this), index);
-                        });
-                    } else if(_index == 4) {
-                        if( $('html').hasClass('lt-ie9')) {
-                            $('.service .process .process-prospect section .sentence').animate({
-                                opacity: 1
-                            }, 800);
-                        } else {
-                            $('.service .process .process-prospect section .sentence').addClass('active');
-                        }
-                    } else if(_index == 5) {
-                        $('.service .process .process-customer .human ul li').each( function(index, val) {
-                            humanShow($(this), index);
-                        });
-                    }
-
-                    // 再帰呼び出し
-                    if( _index <= 5) {
-                        setTimeout(function() {
-                            serviceAnimation( (_index + 1), _interval - 200 );
-                        }, _interval - 200);
-                    } else {
-                        _isShow = true;
-                    }
-                }
-
-                // アニメーション開始
-                if(!_isShow) {
-                    serviceAnimation(1, 1300);
-                }
             }
         });
 

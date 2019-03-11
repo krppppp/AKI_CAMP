@@ -1311,11 +1311,15 @@ section .akitennisclass80.case.akitennisclass215 .akitennisclass63 {
 }
 
 .akitennisclass74 {
-    padding-bottom: 50px;
+    padding-bottom: 0;
+    background: #4d6276;
+    color: #fff;
 }
 
 .akitennisclass74 .common-title {
     padding-top: 60px;
+    color: white;
+    
 }
 
 .akitennisclass74 h2 {
@@ -1323,6 +1327,7 @@ section .akitennisclass80.case.akitennisclass215 .akitennisclass63 {
     font-weight: bold;
     margin-bottom: 30px;
     text-align: center;
+    color: white;
 }
 
 .akitennisclass74 h3 {
