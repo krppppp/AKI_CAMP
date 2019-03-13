@@ -72,6 +72,7 @@ window.onload = function () {
         if(check_io == 0){
             uploadFile();
             error5.innerHTML = "お問い合わせありがとうございました。";
+            window.location.href = `thanks.html`;
         }else{
             error5.innerHTML = "エラーを確認してください。";
             return false;
