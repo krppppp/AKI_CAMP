@@ -127,13 +127,15 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
             _akitennisclass74        = '.akitennisclass74',
             _flow          = '.flow',
             _v_s = '.v_s',
+            _price = ".fh5co-pricing",
             isTitleEffect = {
                 _super: false,
                 _akitennisclass215: false,
                 _needed: false,
                 _akitennisclass74: false,
                 _flow: false,
-                _v_s: false
+                _v_s: false,
+                _price: false,
             };
 
 
@@ -145,12 +147,20 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
         function titleEffect(_el) {
             $('.common-title', _el).animate({
                 opacity: 1
-            }, 200);
-            $('.common-title', _el).letterfx({"fx":"fall","backwards":false,"timing":50,"fx_duration":"120ms","letter_end":"restore","element_end":"restore"});
+            }, 1000);
+            $('.common-title', _el).letterfx({"fx":"fall","backwards":false,"timing":50,"fx_duration":"320ms","letter_end":"restore","element_end":"restore"});
             isTitleEffect[_el] = true;
         }
 
         _window.on('scroll', function(event) {
+
+            if (_window.scrollTop() > $(_akitennisclass215).offset().top - 10) {
+                if(!isTitleEffect[_akitennisclass215]) {
+                    //titleEffect(_akitennisclass215);
+                    $('#wrapper > section:nth-child(3) > div > h1').addClass('fadeIn slower animated');
+                    $('#wrapper > section:nth-child(3) > div > h1').css("opacity",1);
+                }
+            }
 
             // title effect
             if (_window.scrollTop() > $(_super).offset().top - 400) {
@@ -160,19 +170,12 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
                   $('#wrapper > section:nth-child(4) > div > div > h1').css("opacity",1);
                 }
             }
-            if (_window.scrollTop() > $(_akitennisclass215).offset().top - 400) {
-                if(!isTitleEffect[_akitennisclass215]) {
-                  //titleEffect(_akitennisclass215);
-                  $('#wrapper > section:nth-child(3) > div > h1').addClass('fadeIn slower animated');
-                  $('#wrapper > section:nth-child(3) > div > h1').css("opacity",1);
-                  $('#wrapper > section:nth-child(3) > div > h1').addClass('flipInX slower animated');
-                }
-            }
+
             if (_window.scrollTop() > $(_needed).offset().top - 400) {
                 if(!isTitleEffect[_needed]) {
                   //titleEffect(_needed);
-                  $('#wrapper > section:nth-child(6) > div > h1').addClass('shake slower animated');
-                  $('#wrapper > section:nth-child(6) > div > h1').css("opacity",1);
+                  $('#wrapper > section:nth-child(5) > div > h1').addClass('zoomIn slower animated');
+                  $('#wrapper > section:nth-child(5) > div > h1').css("opacity",1);
                 }
             }
 
@@ -184,8 +187,8 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
             if (_window.scrollTop() > $(_flow).offset().top - 400) {
                 if(!isTitleEffect[_flow]) {
                   //titleEffect(_flow);
-                  $('#wrapper > section:nth-child(11) > div > div > h1').addClass('slideInUp slower animated');
-                  $('#wrapper > section:nth-child(11) > div > div > h1').css("opacity",1);
+                  $('#wrapper > section:nth-child(10) > div > div > h1').addClass('zoomInDown slower animated');
+                  $('#wrapper > section:nth-child(10) > div > div > h1').css("opacity",1);
                 }
             }
             if (_window.scrollTop() > $(_v_s).offset().top - 400) {
@@ -193,6 +196,16 @@ jQuery.easing.jswing=jQuery.easing.swing;jQuery.extend(jQuery.easing,{def:"easeO
                     titleEffect(_v_s);
                 }
             }
+            if (_window.scrollTop() > $(_price).offset().top - 400) {
+                if(!isTitleEffect[_price]) {
+                    titleEffect(_price);
+                }
+            }
+
+
+
+
+
 
             if (_window.scrollTop() > $(_super).offset().top) {
                 if( $('html').hasClass('lt-ie9')) {
